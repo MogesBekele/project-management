@@ -1,0 +1,18 @@
+# Node / build
+/node_modules
+/client/node_modules
+/dist
+/client/dist
+/.vite
+/client/.vite
+
+# env
+.env
+.env.local
+.env.*.local
+
+# editor / OS
+.DS_Store
+.vscode/
+.idea/
+# ...existing code...
