@@ -1,5 +1,6 @@
 import { Inngest } from "inngest";
 import prisma  from "../config/prisma.js";
+
 // Create a client to send and receive events
 export const inngest = new Inngest({ id: "project-management"});
 
@@ -35,7 +36,6 @@ const syncUserDeletion = inngest.createFunction(
 )
 
 //inngest function to update user data
-
 const syncUserUpdation = inngest.createFunction(
   {id: 'update-user-from-clerk'},
   {event:'clerk/user.updated'},
