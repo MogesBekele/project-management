@@ -16,3 +16,51 @@
 .vscode/
 .idea/
 # ...existing code...
+
+# Node modules
+/node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build / output
+/dist
+/build
+/out
+/.next
+/.parcel-cache
+/.turbo
+/.webpack
+
+# Coverage / test
+/coverage
+/nyc_output
+/jest-cache
+
+# Environment and secrets
+.env
+.env.local
+.env.*.local
+secrets.env
+
+# Logs and runtime files
+logs
+*.log
+pids
+*.pid
+*.seed
+*.pid.lock
+debug.log
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Misc
+.cache
+.serverless
