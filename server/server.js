@@ -6,7 +6,6 @@ import { serve } from "inngest/express";
 import { inngest, functions } from "./inngest/index.js";
 
 const app = express();
-
 app.use(cors());
 app.use(express.json());
 app.use(clerkMiddleware())
