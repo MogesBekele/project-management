@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(clerkMiddleware());
 
 const PORT = 5000;
-
+// test endpoint
 app.get("/", (req, res) => {
   res.send("server is running ");
 });
