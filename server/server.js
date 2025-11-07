@@ -4,6 +4,7 @@ import cors from "cors";
 import { clerkMiddleware } from "@clerk/express";
 import { serve } from "inngest/express";
 import { inngest, functions } from "./inngest/index.js";
+import workspaceRouter from "./routes/workspaceRoutes.js";
 
 const app = express();
 app.use(cors());
@@ -18,6 +19,9 @@ app.get("/", (req, res) => {
 
 // inngest endpoint
 app.use("/api/inngest", serve({ client: inngest, functions }));
+
+//Routes
+app.use('/api/workspaces', workspaceRouter)
 
 app.listen(PORT, () => {
   console.log("server is running on port " + PORT);
