@@ -12,8 +12,8 @@ const Layout = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false)
     const { loading, workspaces } = useSelector((state) => state.workspace)
     const dispatch = useDispatch()
-    const { user, isLoaded} = useUser()
-    const {getToken}= useAuth()
+    const { user, isLoaded } = useUser()
+    const { getToken } = useAuth()
 
     // Initial load of theme
     useEffect(() => {
@@ -22,9 +22,9 @@ const Layout = () => {
 
 
     //intial load of workspaces
-    useEffect(()=>{
-        if(isLoaded && user && workspaces.length===0){
-            dispatch(fetchWorkspaces({getToken}))
+    useEffect(() => {
+        if (isLoaded && user && workspaces.length === 0) {
+            dispatch(fetchWorkspaces({ getToken }))
         }
     }, [isLoaded, user])
 
@@ -44,10 +44,10 @@ const Layout = () => {
         </div>
     )
 
-    if(user  && workspaces.length ===0){
+    if (user && workspaces.length === 0) {
         return (
             <div className='min-h-screen flex justify-center items-center'>
-                <CreateOrganization/>
+                <CreateOrganization />
             </div>
         )
     }
