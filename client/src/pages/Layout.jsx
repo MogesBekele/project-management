@@ -8,7 +8,6 @@ import { Loader2Icon } from 'lucide-react'
 import { useUser, SignIn, useAuth, CreateOrganization } from '@clerk/clerk-react'
 import { fetchWorkspaces } from '../features/workspaceSlice'
 
-
 const Layout = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false)
     const { loading, workspaces } = useSelector((state) => state.workspace)
